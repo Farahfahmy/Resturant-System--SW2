@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .card-container {
+        width: 1000px;
+        margin: 10% auto 0;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 440px;
+        grid-gap: 40px;
+    }
+
+        .card-container .custom-card {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: .5s;
+            height: 350px;
+        }
+
+            .card-container .custom-card:hover {
+                transform: translateY(-20px);
+                box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+            }
+
+            .card-container .custom-card .card-img-box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: 0.5s;
+            }
+
+            .card-container .custom-card:hover .card-img-box {
+                opacity: 0.5;
+            }
+
+            .card-container .custom-card .card-img-box img {
+                width: 350px;
+                height: 100%;
+            }
+
+            .card-container .custom-card .card-content {
+                position: absolute;
+                width: 100%;
+                height: 60%;
+                bottom: -100%;
+                padding: 20px;
+                box-sizing: border-box;
+                text-align: center;
+                transition: 0.5s;
+                padding-top: 30px;
+            }
+
+            .card-container .custom-card:hover .card-content {
+                bottom: 0
+            }
+
+            .card-container .custom-card:nth-child(1) {
+                background: linear-gradient(0deg, #c21833, transparent)
+            }
+
+            .card-container .custom-card:nth-child(2) {
+                background: linear-gradient(0deg, #8012a5, transparent)
+            }
+
+            .card-container .custom-card:nth-child(3) {
+                background: linear-gradient(0deg, #3a414c, transparent)
+            }
+
+
+            .card-container .custom-card .card-content p {
+                margin: 0;
+                padding: 0;
+                color: #fff;
+                font-size: 13px;
+            }
+</style>
+
+<div class="card-container">
+    <div class="custom-card">
+        <div class="card-img-box">
+            <a href="http://localhost:52175/User/Index">
+            <img src="https://persianmama.com/wp-content/uploads/2015/06/Kabob-Koobideh-1.jpg" />
+                </a>
+        </div>
+        <div class="card-content">
+
+            <p>
+                Grilling is a form of cooking that involves dry heat applied to the surface of food,
+                commonly from above, below or from the side. Grilling usually involves a significant amount of direct, 
+                radiant heat, and tends to be used for cooking meat and vegetables quickly
+            </p>
+
+        </div>
+    </div>
+    <div class="custom-card">
+        <div class="card-img-box">
+            <a href="http://localhost:52175/User/Index">
+                <img src="https://c4.wallpaperflare.com/wallpaper/286/1022/504/greens-food-vegetables-sauce-wallpaper-preview.jpg" />
+            </a>
+            </div>
+        <div class="card-content">
+
+            <p>
+                appetizer or starter is a small dish served before a meal in European cuisine. Some hors d'oeuvres are served cold,
+                others hot. Hors d'oeuvres may be served at the dinner table as a part of the meal,
+         
+                or they may be served before seating, such as at a reception or cocktail party
+            </p>
+
+        </div>
+    </div>
+    <div class="custom-card">
+        <div class="card-img-box">
+            <a href="http://localhost:52175/User/Index">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHBrg_ddpZtf2zf3GX6zNq2VJYRUsi0RdhWgQRoGYmm483kZNv&usqp=CAU" />
+            </a>
+        </div>
+        <div class="card-content">
+
+            <p>
+                Dessert consist of variations of flavors, textures, and appearances. Desserts can be defined as a usually sweeter course that concludes a meal. This definition includes a range of courses ranging from fruits or dried nuts to multi-ingredient cakes and pies.
+            </p>
+
+        </div>
+    </div>
+</div>
+
