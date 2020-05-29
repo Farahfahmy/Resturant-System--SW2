@@ -71,7 +71,7 @@ namespace Graduation_Project.Controllers
             {
                 if (Convert.ToInt32(Session["TyperId"]) == 2)
                 {
-                  return  RedirectToAction("Index", "User");
+                  return  RedirectToAction("EditProfile", "User");
                 }
                 else if (Convert.ToInt32(Session["TyperId"]) == 1)
                 {
