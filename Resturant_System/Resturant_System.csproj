@@ -260,6 +260,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\UserReport.cshtml" />
     <Content Include="Views\User\EditProfile.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\MyOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

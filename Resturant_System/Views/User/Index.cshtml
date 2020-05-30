@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Resturant_System.Models.Items>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Order Menu</h1>
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>
+            Category
+            @Html.DisplayNameFor(model => model.category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="record_@item.Id">
+            <td>
+                @Html.DisplayFor(modelItem => item.category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <button type="button" class="btn btn-success" id="add" onclick="AddItem(@item.Id)">Add To Car</button>
+
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    function AddItem(id) {
+            if (confirm("Add This Item To the Car !")) {
+                $.ajax({
+                    type: "Post",
+                    url: "/User/AddOrderItem?ItemId=" + id,
+                    success: function (response) {
+                        if (response.result == 1) {
+                            alert("Item Have Been Added")
+
+                        }
+                        else {
+                            alert("Couldn't Add This Item")
+                        }
+
+                    }
+                })
+            }
+        }
+
+</script>
